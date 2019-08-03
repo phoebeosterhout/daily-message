@@ -15,19 +15,19 @@ var updateClock = function() {
 	var lolcat = document.getElementById('lolcat');
 	var message = document.getElementById("timeEvent");
 	var messageText;
-	var image = "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/cat5.jpg";
+	var image = "img/morning.jpg";
 
 	if (time == partyTime){
-		image = "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/cat4.jpg";
+		image = "img/morning.jpg";
     	messageText = "Party time!!!";
 	} else if (time == napTime) {
-		image = "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/cat3.jpg";
+		image = "img/morning.jpg";
     	messageText = "It's nap time...";
 	} else if (time == lunchTime) {
-		image = "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/cat2.jpg";
+		image = "img/lunch.jpg";
     	messageText = "Time for Lunch!";
 	} else if (time == wakeupTime) {
-		image = "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/cat1.jpg";
+		image = "img/morning.jpg";
     	messageText = "Rise and shine!";
 	} else if (time < noon) {
     	messageText = "Good morning!";
