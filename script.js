@@ -12,29 +12,29 @@ var lunchTimeSelector = document.getElementById("lunchTimeSelector");
 var napTimeSelector = document.getElementById("napTimeSelector");
 
 var updateClock = function() {
-	var lolcat = document.getElementById('lolcat');
+	var picture = document.getElementById('background');
 	var message = document.getElementById("timeEvent");
 	var messageText;
-	var image = "img/morning.jpg";
+	var image = "img/lunch.jpg";
 
 	if (time == partyTime){
-		image = "img/morning.jpg";
-    	messageText = "Party time!!!";
+		picture.style.background-image = "img/morning.jpg";
+    	messageText = "Dance party";
 	} else if (time == napTime) {
 		image = "img/morning.jpg";
     	messageText = "It's nap time...";
 	} else if (time == lunchTime) {
 		image = "img/lunch.jpg";
-    	messageText = "Time for Lunch!";
+    	messageText = "Time for Lunch.";
 	} else if (time == wakeupTime) {
 		image = "img/morning.jpg";
-    	messageText = "Rise and shine!";
+    	messageText = "Rise and shine.";
 	} else if (time < noon) {
-    	messageText = "Good morning!";
+    	messageText = "Good morning.";
 	} else if (time > evening) {
-    	messageText = "Good Evening!";
+    	messageText = "Good Evening.";
 	} else {
-    	messageText = "Good afternoon!";
+    	messageText = "Good afternoon.";
 	}
 
 	message.innerText = messageText;
@@ -77,7 +77,7 @@ var showCurrentTime = function()
     }
 
     // put together the string that displays the time
-    var clockTime = hours + ":" + minutes + ":" + seconds + " " + meridian + "!";
+    var clockTime = hours + ":" + minutes + ":" + seconds + " " + meridian;
 
     clock.innerText = clockTime;
 };
@@ -90,12 +90,12 @@ var partyEvent = function() {
 	if (isPartyTime === false) {
 		isPartyTime = true;
 		time = partyTime;
-		partyButton.innerText = "Party Time!";
+		partyButton.innerText = "Dance Party!";
 		partyButton.style.backgroundColor = "#222";
 	} else {
 		isPartyTime = false;
 		time = new Date().getHours();
-		partyButton.innerText = "Party Over";
+		partyButton.innerText = "Back to Work";
 		partyButton.style.backgroundColor = "#0A8DAB";
 	}
 };
