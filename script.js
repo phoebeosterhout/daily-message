@@ -30,10 +30,13 @@ var updateClock = function() {
 		image = "img/morning.jpg";
     	messageText = "Rise and shine.";
 	} else if (time < noon) {
+		image = "img/morning.jpg";
     	messageText = "Good morning.";
 	} else if (time > evening) {
+		image = "img/morning.jpg";
     	messageText = "Good Evening.";
 	} else {
+		image = "img/morning.jpg";
     	messageText = "Good afternoon.";
 	}
 
