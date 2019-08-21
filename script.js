@@ -12,32 +12,28 @@ var lunchTimeSelector = document.getElementById("lunchTimeSelector");
 var napTimeSelector = document.getElementById("napTimeSelector");
 
 var updateClock = function() {
-	var picture = document.getElementById('background');
+	var landscape = document.getElementById('landscape');
 	var message = document.getElementById("timeEvent");
 	var messageText;
-	var image = "img/lunch.jpg";
 
 	if (time == partyTime){
-		picture.style.background-image = "img/morning.jpg";
-    	messageText = "Dance party";
+		landscape.src = "img/party.jpg";
+    	messageText = "Party time!!";
 	} else if (time == napTime) {
-		image = "img/morning.jpg";
+		landscape.src = "img/nap.jpg";
     	messageText = "It's nap time...";
 	} else if (time == lunchTime) {
-		image = "img/lunch.jpg";
-    	messageText = "Time for Lunch.";
+		landscape.src = "img/lunch.jpg";
+    	messageText = "Time for Lunch!";
 	} else if (time == wakeupTime) {
-		image = "img/morning.jpg";
-    	messageText = "Rise and shine.";
+		landscape.src = "img/morning.jpg";
+    	messageText = "Rise and shine!";
 	} else if (time < noon) {
-		image = "img/morning.jpg";
-    	messageText = "Good morning.";
+    	messageText = "Good morning!";
 	} else if (time > evening) {
-		image = "img/morning.jpg";
-    	messageText = "Good Evening.";
+    	messageText = "Good Evening!";
 	} else {
-		image = "img/morning.jpg";
-    	messageText = "Good afternoon.";
+    	messageText = "Good afternoon!";
 	}
 
 	message.innerText = messageText;
@@ -93,13 +89,13 @@ var partyEvent = function() {
 	if (isPartyTime === false) {
 		isPartyTime = true;
 		time = partyTime;
-		partyButton.innerText = "Dance Party!";
-		partyButton.style.backgroundColor = "#222";
+		partyButton.innerText = "Party Over";
+		partyButton.style.backgroundColor = "#0A8DAB";
 	} else {
 		isPartyTime = false;
 		time = new Date().getHours();
-		partyButton.innerText = "Back to Work";
-		partyButton.style.backgroundColor = "#0A8DAB";
+		partyButton.innerText = "Party Time!!";
+		partyButton.style.backgroundColor = "#222";
 	}
 };
 
